@@ -11,10 +11,16 @@ import { Component, input } from '@angular/core';
 export class ControlFlowComponent {
   mes: number = 0;
   itens: string[] = ["Maçã", "Banana", "Leite"]
+  idade: number = 0;
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
     this.mes =  parseInt(elementoSelecionado.value)
+  }
+
+  trocarIdade(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.idade =  parseInt(elementoSelecionado.value)
   }
 
 }
