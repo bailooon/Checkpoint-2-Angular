@@ -70,3 +70,16 @@
 }
 
 <hr>
+
+<h2> Exercício 4: Lista com Ações Dinâmicas</h2>
+
+<ul>
+    @for(tarefa of tarefas; track $index){
+        <li>{{tarefa}}
+        <button (click)="removerTarefa( $index )">Remover Tarefa</button>
+    </li>
+    } @empty {
+        <p>Nenhuma tarefa na lista</p>
+    }
+
+</ul>

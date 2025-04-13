@@ -10,8 +10,9 @@ import { Component, input } from '@angular/core';
 })
 export class ControlFlowComponent {
   mes: number = 0;
-  itens: string[] = ["Maçã", "Banana", "Leite"]
+  itens: string[] = ["Maçã", "Banana", "Leite"];
   idade: number = 0;
+  tarefas: string[] = ["Estudar Angular", "Fazer exercícios", "Revisar código"];
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
@@ -21,6 +22,10 @@ export class ControlFlowComponent {
   trocarIdade(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
     this.idade =  parseInt(elementoSelecionado.value)
+  }
+
+  removerTarefa(index: number): void{
+    this.tarefas.splice(index, 1);
   }
 
 }
