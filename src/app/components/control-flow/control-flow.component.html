@@ -46,3 +46,14 @@
   }
 
   <hr>
+
+  <h2>Exercício 2: Lista Dinâmica com for </h2>
+
+  <ul>
+    @for(item of itens; track $index){
+        <li>{{item}} - {{ $index }}</li>
+    } @empty {
+        <li>Nenhum item na lista </li>
+    }
+  </ul>
+

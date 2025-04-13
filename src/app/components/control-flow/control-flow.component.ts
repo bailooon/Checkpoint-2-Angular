@@ -10,6 +10,7 @@ import { Component, input } from '@angular/core';
 })
 export class ControlFlowComponent {
   mes: number = 0;
+  itens: string[] = ["Maçã", "Banana", "Leite"]
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
