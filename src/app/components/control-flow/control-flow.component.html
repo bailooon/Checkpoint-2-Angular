@@ -1,0 +1,48 @@
+
+<h2>Exercício 1: Uso Básico do switch</h2>
+<label for="seletor-mes">Insira um mês: </label>
+<input id="seletor-mes" type="number" (change)="trocarMes($event)">
+
+@switch (mes) {
+    @case (1) {
+      <p>Janeiro</p>
+    }
+    @case (2) {
+      <p>Fevereiro</p>
+    }
+    @case (3) {
+      <p>Março</p>
+    }
+    @case (4) {
+      <p>Abril</p>
+    }
+    @case (5){
+      <p>Maio</p>
+    }
+    @case (6) {
+      <p>Junho</p>
+    }
+    @case (7) {
+      <p>Julho</p>
+    }
+    @case (8) {
+      <p>Agosto</p>
+    }
+    @case (9) {
+      <p>Setembro</p>
+    }
+    @case (10) {
+      <p>Outubro</p>
+    }
+    @case (11) {
+      <p>Novembro</p>
+    }
+    @case (12) {
+      <p>Dezembro</p>
+    }
+    @default {
+      <p>Mês não encontrado</p>
+    }
+  }
+
+  <hr>
