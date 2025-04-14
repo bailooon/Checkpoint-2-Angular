@@ -171,5 +171,19 @@
 
 <hr>
 
+<h2>Exercicio 9: Lista de Produtos com Condicionais</h2>
+
+@for(produto of produtos; track produto.nome){
+    @if(produto.promocao == true){
+        <p class="promocao">Nome: {{produto.nome}} Preço: {{produto.preco}} Promoção: {{produto.promocao}}</p>
+    } @else {
+        <p>Nome: {{produto.nome}} Preço: {{produto.preco}} Promoção: {{produto.promocao}}</p>
+    }
+} @empty {
+    <p>Nenhum produto cadastrado</p>
+}
+
+<hr>
+
 
     

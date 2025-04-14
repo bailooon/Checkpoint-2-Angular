@@ -20,6 +20,8 @@ export class ControlFlowComponent {
   senhaValida: string = "123456"
   email: string = "";
   senha: string = "";
+  produtos = [{nome:"Notebook", preco: 3000, promocao:true}, {nome:"Mouse", preco:50, promocao:false}]
+
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
