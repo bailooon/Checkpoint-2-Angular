@@ -13,6 +13,7 @@ export class ControlFlowComponent {
   itens: string[] = ["Maçã", "Banana", "Leite"];
   idade: number = 0;
   tarefas: string[] = ["Estudar Angular", "Fazer exercícios", "Revisar código"];
+  status: string = "pendente";
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
@@ -26,6 +27,11 @@ export class ControlFlowComponent {
 
   removerTarefa(index: number): void{
     this.tarefas.splice(index, 1);
+  }
+
+  trocarStatus(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.status = elementoSelecionado.value
   }
 
 }

@@ -81,5 +81,31 @@
     } @empty {
         <p>Nenhuma tarefa na lista</p>
     }
-
 </ul>
+
+<hr>
+
+<h2>Exercício 5: Switch com Múltiplos Cases</h2>
+
+<label for="selector-status">Selecione um Status para o pedido</label>
+<select id="selector-status" (change)="trocarStatus($event)">
+  <option value="pendente">Pendente</option>
+  <option value="enviado">Enviado</option>
+  <option value="entregue">Entregue</option>
+</select>
+
+
+@switch (status){
+    @case ("pendente"){
+        <p>Aguardando confirmação</p>
+    }
+    @case ("enviado"){
+        <p>Pedido a caminho</p>
+    }
+    @case ("entregue"){
+        <p>Pedido entregue</p>
+    }
+    @default{
+        <p>Status desconhecido</p>
+    }
+}
