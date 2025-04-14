@@ -109,3 +109,15 @@
         <p>Status desconhecido</p>
     }
 }
+
+<hr>
+
+<h2>Exercício 6: Lista de Objetos com for</h2>
+<ul>
+
+    @for(usuario of usuarios; track usuario.nome){
+        <li>Nome: {{usuario.nome}}, Idade: {{usuario.idade}}</li>
+    } @empty {
+        <p>Nenhum usuário cadastrado</p>
+    }
+</ul>

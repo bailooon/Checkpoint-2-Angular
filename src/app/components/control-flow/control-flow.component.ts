@@ -14,6 +14,7 @@ export class ControlFlowComponent {
   idade: number = 0;
   tarefas: string[] = ["Estudar Angular", "Fazer exercícios", "Revisar código"];
   status: string = "pendente";
+  usuarios = [{nome: "Ana", idade: 25}, {nome:"Carlos", idade: 30}]
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
