@@ -175,15 +175,50 @@
 
 @for(produto of produtos; track produto.nome){
     @if(produto.promocao == true){
-        <p class="promocao">Nome: {{produto.nome}} Preço: {{produto.preco}} Promoção: {{produto.promocao}}</p>
+        <p class="promocao">Nome: {{produto.nome}} | Preço: {{produto.preco}} | Promoção: {{produto.promocao}}</p>
     } @else {
-        <p>Nome: {{produto.nome}} Preço: {{produto.preco}} Promoção: {{produto.promocao}}</p>
+        <p>Nome: {{produto.nome}} | Preço: {{produto.preco}} | Promoção: {{produto.promocao}}</p>
     }
 } @empty {
     <p>Nenhum produto cadastrado</p>
 }
 
 <hr>
+
+<h2>Exercício 10: Calculadora Simples com Switch</h2>
+
+<select id="seletor-operacao" (change)="trocarOperacao($event)">
+    <option value="Soma">Soma</option>
+    <option value="Subtracao">Subtracao</option>
+    <option value="Divisao">Divisao</option>
+    <option value="Multiplicacao">Multiplicacao</option>
+</select>
+
+<input id="valor1" type="number" (change)="adicionarValor1($event)">
+<input id="valor2" type="number" (change)="adicionarValor2($event)">
+
+@switch(operacao){
+    @case("Soma"){
+        <p>Soma dos valores: {{valor1 + valor2}}</p>
+    }
+    @case("Subtracao"){
+        <p>Subtracao dos valores: {{valor1 - valor2}}</p>
+    }
+    @case("Divisao"){
+        @if(valor2 == 0){
+            <p class="color-red">Erro: Divisão por zero!</p>
+        } @else {
+            <p>Divisão dos valores: {{valor1 / valor2}}</p>
+        }
+    }
+    @case("Multiplicacao"){
+        <p>Multiplicacao dos valores: {{valor1 * valor2}}</p>
+    }
+}
+
+<hr>
+
+
 
 
     

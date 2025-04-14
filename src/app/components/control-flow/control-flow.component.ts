@@ -21,6 +21,11 @@ export class ControlFlowComponent {
   email: string = "";
   senha: string = "";
   produtos = [{nome:"Notebook", preco: 3000, promocao:true}, {nome:"Mouse", preco:50, promocao:false}]
+  valor1: number = 0;
+  valor2: number = 0;
+  resultado: number = 0;
+  operacao = "Soma";
+
 
 
   trocarMes(event:Event) : void{
@@ -55,6 +60,21 @@ export class ControlFlowComponent {
   escreverSenha(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
     this.senha = elementoSelecionado.value
+  }
+
+  trocarOperacao(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.operacao = elementoSelecionado.value
+  }
+
+  adicionarValor1(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.valor1 = parseFloat(elementoSelecionado.value)
+  }
+
+  adicionarValor2(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.valor2 = parseFloat(elementoSelecionado.value)
   }
 
 }
