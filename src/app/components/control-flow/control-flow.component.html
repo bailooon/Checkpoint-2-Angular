@@ -148,3 +148,28 @@
 }
 
 <hr>
+
+<h2>Exercício 8: Sistema de Login com if e else</h2>
+
+
+<form action="">
+    <p>(usuário e senha corretos: "user&#64;teste.com", "123456")</p>
+<label for="email">Insira o Email: </label>
+<input id="email" type="email" required (change)="escreverEmail($event)">
+
+<label for="senha"> Insira a Senha: </label>
+<input id="senha" type="password" minlength="6"  required (change)="escreverSenha($event)">
+@if(email === "" || senha === ""){
+    <p class="color-red">Campos Obrigatórios!!!</p>
+} @else if(email === "user@teste.com" && senha === "123456"){
+    <p class="color-green">Login bem sucedido!!</p>
+    <button>Salvar</button>
+} @else {
+    <p class="color-red">Credenciais Inválidas</p>
+}
+</form>
+
+<hr>
+
+
+    

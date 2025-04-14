@@ -16,6 +16,10 @@ export class ControlFlowComponent {
   status: string = "pendente";
   usuarios = [{nome: "Ana", idade: 25}, {nome:"Carlos", idade: 30}]
   numero: string = "";
+  emailValido: string = "user@teste.com"
+  senhaValida: string = "123456"
+  email: string = "";
+  senha: string = "";
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
@@ -39,6 +43,16 @@ export class ControlFlowComponent {
   trocarNumero(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
     this.numero = elementoSelecionado.value
+  }
+
+  escreverEmail(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.email = elementoSelecionado.value
+  }
+
+  escreverSenha(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.senha = elementoSelecionado.value
   }
 
 }
