@@ -121,3 +121,30 @@
         <p>Nenhum usuário cadastrado</p>
     }
 </ul>
+
+<hr>
+
+<h2>Exercício 7: Switch com Números e Strings</h2>
+
+<label for="seletor-numero">Insira um Número </label>
+<input id="seletor-numero" type="text" (change)="trocarNumero($event)">
+
+@switch(numero){
+    @case("1"){
+        <p>Um</p>
+    }
+    @case("um"){
+        <p>Um</p>
+    }
+    @case("2"){
+        <p>Dois</p>
+    }
+    @case("dois"){
+        <p>Dois</p>
+    }
+    @default{
+        <p>Valor não reconhecido</p>
+    }
+}
+
+<hr>

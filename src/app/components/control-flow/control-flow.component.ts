@@ -15,6 +15,7 @@ export class ControlFlowComponent {
   tarefas: string[] = ["Estudar Angular", "Fazer exercícios", "Revisar código"];
   status: string = "pendente";
   usuarios = [{nome: "Ana", idade: 25}, {nome:"Carlos", idade: 30}]
+  numero: string = "";
 
   trocarMes(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
@@ -33,6 +34,11 @@ export class ControlFlowComponent {
   trocarStatus(event:Event) : void{
     const elementoSelecionado = event.target as HTMLSelectElement
     this.status = elementoSelecionado.value
+  }
+
+  trocarNumero(event:Event) : void{
+    const elementoSelecionado = event.target as HTMLSelectElement
+    this.numero = elementoSelecionado.value
   }
 
 }
